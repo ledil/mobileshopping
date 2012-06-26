@@ -33,7 +33,7 @@
 				margin: "0",
 				"border-bottom": "1px solid #fff",
 				"padding-left": "30px",
-				cursor:"pointer"
+				cursor : "pointer"
 			});
 			$('#ma-mshopping div#tabs').append(h1);
 			i += 1;
