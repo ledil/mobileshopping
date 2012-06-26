@@ -26,7 +26,7 @@
 		// create Iframe
 		function(next) {
 			$("#ma-mshopping").remove();
-			$(document.body).append('<div id="ma-mshopping" style="padding: 0px; background:#fff; position: absolute; top: 0px; right: 0px; z-index: 999999999;" width="350px" height="660px"></div>');
+			$(document.body).append('<div id="ma-mshopping" style="padding: 0px; background:#fff; position: absolute; top: 0px; right: 0px; z-index: 999999999;width:350px;height:660px"></div>');
 			//console.log("test2");
 			//next(null);
 			//console.log("test3");
