@@ -26,10 +26,8 @@
 		// create Iframe
 		function(next) {
 			$("#ma-mshopping").remove();
-			$(document.body).append('<div id="ma-mshopping" style="padding: 0px; background:#fff; position: absolute; top: 0px; right: 0px; z-index: 999999999;width:350px;height:660px"></div>');
-			//console.log("test2");
-			//next(null);
-			//console.log("test3");
+			$(document.body).append('<div id="ma-mshopping" style="padding: 0px; background:#fff; position: absolute; top: 10px; right: 10px; z-index: 999999999;width:350px;height:660px;-webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);border:1px solid #efefef;"></div>');
+			next(null);
 		}
 	]);
 })(window);  
