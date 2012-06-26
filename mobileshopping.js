@@ -1,5 +1,5 @@
 (function(window){
-	var $;
+/*	var $;*/
   
 	// Run several asyncronous functions in order
 	var waterfall = function(fxs){
