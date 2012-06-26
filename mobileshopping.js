@@ -24,11 +24,14 @@
 	var createTabs = function() {
 		var i = 1;
 		while (true) {
-			var h1 = $('<h1>')
-			.text(tabs[i]);
+			var h1 = $('<h1>').text(tabs[i]);
+			console.log("hier1");
 			$('#ma-shopping').append(h1);
+			console.log("hier2");
 			i += 1;
+			console.log("hier3");
 			if (typeof(tabs[i]) == 'undefined') break;
+			console.log("hier4");
 		};
 	};
   
