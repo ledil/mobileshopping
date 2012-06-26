@@ -32,9 +32,10 @@
 				color: "#aaa",
 				margin: "0",
 				"border-bottom": "1px solid #fff",
-				"padding-left": "30px"
+				"padding-left": "30px",
+				cursor:"pointer"
 			});
-			$('#ma-mshopping').append(h1);
+			$('#ma-mshopping div#tabs').append(h1);
 			i += 1;
 			if (typeof(tabs[i]) == 'undefined') break;
 		};
@@ -55,7 +56,7 @@
 		// create Iframe
 		function(next) {
 			$("#ma-mshopping").remove();
-			$(document.body).append('<div id="ma-mshopping" style="padding: 0px; background:#fff; position: fixed; top: 10px; right: 10px; z-index: 999999999;width:350px;height:660px;-webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);border:1px solid #efefef;"></div>');
+			$(document.body).append('<div id="ma-mshopping" style="padding: 0px; background:#fff; position: fixed; top: 10px; right: 10px; z-index: 999999999;width:350px;height:660px;-webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);border:1px solid #efefef;"><div id="tabs"></div></div>');
 			createTabs();
 		}
 	]);
