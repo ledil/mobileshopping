@@ -27,11 +27,12 @@
 			var h1 = $('<h1>').text(tabs[i]).css({
 				display: "block",
 				background: "#efefef",
-				"font-size": "20px",
+				"font-size": "17px",
 				padding: "10px",
-				color: "#aaa;",
+				color: "#aaa",
 				margin: "0",
-				"border-bottom": "1px solid #fff"
+				"border-bottom": "1px solid #fff",
+				"padding-left": "30px"
 			});
 			$('#ma-mshopping').append(h1);
 			i += 1;
