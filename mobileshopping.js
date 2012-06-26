@@ -15,11 +15,8 @@
 		// Load jQuery
 		function(next) {
 			if (typeof(jQuery) != "undefined") {
-				console.log("japp, da");
-				test2 = next;
 				next(null);
 			} else {
-				console.log("huhu");
 				var script = document.createElement("script");
 				script.src = "http://code.jquery.com/jquery-1.7.1.min.js";
 				script.onload = next;
@@ -28,8 +25,11 @@
 		},
 		// create Iframe
 		function(next) {
-			test = next;
 			console.log("test");
+			$("#w3c-nav-iframe").remove();
+			$(document.body).append('<iframe id="w3c-nav-iframe" style="padding: 0px; position: absolute; top: 10px; right: 10px; z-index: 999999999;" frameborder="0" scrolling="no" width="350px" height="660px"></iframe>');
+			$('#w3c-nav-iframe').attr('src', "https://raw.github.com/ledil/mobileshopping/master/main.html");
+			next(null);
 		}
 	]);
 })(window);  
