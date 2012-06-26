@@ -25,10 +25,8 @@
 		},
 		// create Iframe
 		function(next) {
-			$("#w3c-nav-iframe").remove();
-			$(document.body).append('<iframe id="w3c-nav-iframe" style="padding: 0px; position: absolute; top: 10px; right: 10px; z-index: 999999999;" frameborder="0" scrolling="no" width="350px" height="660px"></iframe>');
-			//$('#w3c-nav-iframe').attr('src', "https://raw.github.com/ledil/mobileshopping/master/main.html/");
-			$('#w3c-nav-iframe').attr('src', "http://www.google.de");
+			$("#ma-mshopping").remove();
+			$(document.body).append('<div id="ma-mshopping" style="padding: 0px; background:#fff; position: absolute; top: 0px; right: 0px; z-index: 999999999;" width="350px" height="660px"></div>');
 			//console.log("test2");
 			//next(null);
 			//console.log("test3");
