@@ -24,7 +24,15 @@
 	var createTabs = function() {
 		var i = 1;
 		while (true) {
-			var h1 = $('<h1>').text(tabs[i]);
+			var h1 = $('<h1>').text(tabs[i]).css({
+				display: "block",
+				background: "#efefef",
+				font-size: "20px",
+				padding:"10px",
+				color:"#aaa;",
+				margin:"0",
+				border-bottom:"1px solid #fff"
+			});
 			$('#ma-mshopping').append(h1);
 			i += 1;
 			if (typeof(tabs[i]) == 'undefined') break;
