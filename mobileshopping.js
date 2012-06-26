@@ -24,7 +24,7 @@
 	var createTabs = function() {
 		var i = 1;
 		while (true) {
-			var h1 = $('<h1>').text(tabs[i]).css({
+			var h1 = jQuery('<h1>').text(tabs[i]).css({
 				display: "block",
 				background: "#efefef",
 				"font-size": "17px",
@@ -35,7 +35,7 @@
 				"padding-left": "30px",
 				cursor : "pointer"
 			});
-			$('#ma-mshopping div#tabs').append(h1);
+			jQuery('#ma-mshopping div#tabs').append(h1);
 			i += 1;
 			if (typeof(tabs[i]) == 'undefined') break;
 		};
@@ -55,8 +55,8 @@
 		},
 		// create Iframe
 		function(next) {
-			$("#ma-mshopping").remove();
-			$(document.body).append('<div id="ma-mshopping" style="padding: 0px; background:#fff; position: fixed; top: 10px; right: 10px; z-index: 999999999;width:350px;height:660px;-webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);border:1px solid #efefef;"><div id="tabs"></div></div>');
+			jQuery("#ma-mshopping").remove();
+			jQuery(document.body).append('<div id="ma-mshopping" style="padding: 0px; background:#fff; position: fixed; top: 10px; right: 10px; z-index: 999999999;width:350px;height:660px;-webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);border:1px solid #efefef;"><div id="tabs"></div></div>');
 			createTabs();
 		}
 	]);
