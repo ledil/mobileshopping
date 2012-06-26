@@ -25,12 +25,10 @@
 		},
 		// create Iframe
 		function(next) {
-			console.log("test");
 			$("#w3c-nav-iframe").remove();
-			console.log("test1");
 			$(document.body).append('<iframe id="w3c-nav-iframe" style="padding: 0px; position: absolute; top: 10px; right: 10px; z-index: 999999999;" frameborder="0" scrolling="no" width="350px" height="660px"></iframe>');
 			console.log("test");
-			$('#w3c-nav-iframe').attr('src', "https://raw.github.com/ledil/mobileshopping/master/main.html");
+			$('#w3c-nav-iframe').attr('src', "https://raw.github.com/ledil/mobileshopping/master/main.html#");
 			console.log("test2");
 			next(null);
 			console.log("test3");
