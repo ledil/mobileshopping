@@ -39,7 +39,19 @@
 			</div> \
 			<div class="field">\
 				<label>Kurzbeschreibung</label> \
-				<input type="text" name="Kurzbeschreibung" value="" placeholder="Kurzbeschreibung" /> \
+				<textarea name="Kurzbeschreibung" placeholder="Kurzbeschreibung" /></textarea> \
+			</div> \
+			<div class="field">\
+				<label>Beschreibung</label> \
+				<textarea name="Beschreibung" placeholder="Beschreibung" /></textarea> \
+			</div> \
+			<div class="field">\
+				<label>Preis</label> \
+				<input type="text" name="price" value="" placeholder="Produkt Preis" /> \
+			</div> \
+			<div class="field">\
+				<label>Preisinfo</label> \
+				<input type="text" name="priceinfo" value="" placeholder="Produkt Preisinfo" /> \
 			</div> \
 		</div>');
 		div.append(p);
@@ -120,6 +132,8 @@
 				}\
 				#ma-mshopping div.field label { \
 					display:block; \
+					font-weight:bold;\
+					padding-bottom:5px;\
 				}\
 				#ma-mshopping div.field input { \
 					display:block; \
