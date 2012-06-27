@@ -36,15 +36,19 @@
 				cursor : "pointer"
 			}).attr('tabindex',i).click(function() {
 				var last_h1 = $('#ma-mshopping h1.expanded');
-				fafa = last_h1;
+				var prior_tabindex = last_h1.attr('tabindex');
 				last_h1.removeClass('expanded');
-				fofo = this;
-				console.log("japp");
+				var tabindex = $(this).attr('tabindex');
+				$(this).addClass('expanded');
+				$('#ma-mshopping #tab_'+prior_tabindex).hide();
+				$('#ma-mshopping #tab_'+tabindex).show();
 			});
 			if (i == 1) {
 				h1.addClass('expanded');
+				var div = jQuery('<div id="tab_'+i+'">');
+			} else {
+				var div = jQuery('<div id="tab_'+i+'" style="display:none;">');			
 			}
-			var div = jQuery('<div id="tab_'+i+'">');
 			jQuery('#ma-mshopping div#tabs').append(h1);
 			jQuery('#ma-mshopping div#tabs').append(div);
 			i += 1;
