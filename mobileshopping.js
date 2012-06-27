@@ -23,7 +23,9 @@
 	
 	var createTab_product_infos = function(div) {
 		var p = jQuery('<p>').text('Alle wichtigen produktspezifischen Daten können hier eingetragen werden');
+		var div_picture = jQuery('<div class="picture"><img src="" /></div>');
 		div.append(p);
+		div.append(div_picture);
 	};
 	
 	var createTabs = function() {
@@ -84,7 +86,7 @@
 			css.type = "text/css";
 			document.getElementsByTagName("head")[0].appendChild(css);
 			$(css).html('\
-				#ma-shopping {\
+				#ma-mshopping {\
 					text-align:left;\
 				}\
 				#ma-mshopping div.tabs { \
@@ -92,6 +94,7 @@
 				}\
 				#ma-mshopping div.tabs p { \
 					color:#888; \
+					font-weight:normal;\
 				}\
 			');
 		
