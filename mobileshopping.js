@@ -84,7 +84,7 @@
 			css.href = "https://raw.github.com/ledil/mobileshopping/master/mobileshopping.css?v="+(Math.random());
 			css.type = "text/css";
 			css.rel = "stylesheet";
-			css.media = "screen";
+			css.media = "all";
 			document.getElementsByTagName("head")[0].appendChild(css);
 		
 			if (typeof(jQuery) != "undefined") {
@@ -102,7 +102,6 @@
 			jQuery("#ma-mshopping").remove();
 			jQuery(document.body).append('<div id="ma-mshopping" style="padding: 0px; background:#fff; position: fixed; top: 10px; right: 10px; z-index: 999999999;width:350px;height:660px;-webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);border:1px solid #efefef;"><div id="tabs"></div></div>');
 			createTabs();
-			
 		}
 	]);
 })(window);  
