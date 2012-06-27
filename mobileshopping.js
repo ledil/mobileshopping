@@ -26,12 +26,20 @@
 		var div_picture = jQuery('<div class="picture"><img src="" /></div>');
 		var fields = jQuery('\
 			<div class="field">\
-				<label>Titel</label> \
-				<input type="text" name="title" value="" placeholder="Produkttitel" /> \
+				<label>Bildlink</label> \
+				<input type="text" name="picturelink" value="" placeholder="Link zum Produktbild" /> \
 			</div> \
 			<div class="field">\
 				<label>Titel</label> \
 				<input type="text" name="title" value="" placeholder="Produkttitel" /> \
+			</div> \
+			<div class="field">\
+				<label>Subtitel</label> \
+				<input type="text" name="subtitle" value="" placeholder="Produkt Subtitel" /> \
+			</div> \
+			<div class="field">\
+				<label>Kurzbeschreibung</label> \
+				<input type="text" name="Kurzbeschreibung" value="" placeholder="Kurzbeschreibung" /> \
 			</div> \
 		</div>');
 		div.append(p);
@@ -108,12 +116,14 @@
 				}\
 				#ma-mshopping div.field { \
 					overflow:hidden; \
+					padding-bottom:10px;\
 				}\
 				#ma-mshopping div.field label { \
 					display:block; \
 				}\
 				#ma-mshopping div.field input { \
 					display:block; \
+					width:320px;\
 				}\
 				#ma-mshopping div.tabs p { \
 					color:#888; \
