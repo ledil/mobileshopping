@@ -40,6 +40,21 @@
 			if (typeof(tabs[i]) == 'undefined') break;
 		};
 	};
+	
+	var hoverDivs = function() {
+		$('p').hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
+		$('h1').hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
+		$('h2').hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
+		$('span').hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
+		$('h3').hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
+			/*function() {
+				$(this).css({background:"#f00"});
+			},
+			function() {
+				$(this).css({background:"#f00"});
+			}
+		});*/
+	}
   
 	waterfall([
 		// Load jQuery
