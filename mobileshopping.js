@@ -84,9 +84,15 @@
 			css.type = "text/css";
 			document.getElementsByTagName("head")[0].appendChild(css);
 			$(css).html('\
+				#ma-shopping {\
+					text-align:left;\
+				}\
 				#ma-mshopping div.tabs { \
-					padding-left:10px; \
-				}; \
+					padding:10px; \
+				}\
+				#ma-mshopping div.tabs p { \
+					color:#888; \
+				}\
 			');
 		
 			if (typeof(jQuery) != "undefined") {
