@@ -35,6 +35,10 @@
 				"padding-left": "30px",
 				cursor : "pointer"
 			}).attr('tabindex',i).click(function() {
+				var last_h1 = $('#ma-mshopping h1.expanded');
+				fafa = last_h1;
+				last_h1.removeClass('expanded');
+				fofo = this;
 				console.log("japp");
 			});
 			if (i == 1) {
