@@ -80,12 +80,14 @@
 	waterfall([
 		// Load jQuery
 		function(next) {
-			var css = document.createElement("link");
-			css.href = "https://raw.github.com/ledil/mobileshopping/master/mobileshopping.css?v="+(Math.random());
+			var css = document.createElement("style");
 			css.type = "text/css";
-			css.rel = "stylesheet";
-			css.media = "all";
 			document.getElementsByTagName("head")[0].appendChild(css);
+			$(css).html('\
+				#ma-mshopping div.tabs { \
+					padding-left:10px; \
+				}; \
+			');
 		
 			if (typeof(jQuery) != "undefined") {
 				next(null);
