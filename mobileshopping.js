@@ -50,9 +50,9 @@
 			});
 			if (i == 1) {
 				h1.addClass('expanded');
-				var div = jQuery('<div id="tab_'+i+'">');
+				var div = jQuery('<div class="tabs" id="tab_'+i+'">');
 			} else {
-				var div = jQuery('<div id="tab_'+i+'" style="display:none;">');			
+				var div = jQuery('<div class="tabs" id="tab_'+i+'" style="display:none;">');			
 			}
 			
 			/* all tabs */
@@ -80,6 +80,13 @@
 	waterfall([
 		// Load jQuery
 		function(next) {
+			var css = document.createElement("link");
+			css.href = "";
+			css.type = "text/css";
+			css.rel = "stylesheet";
+			css.media = "screen";
+			document.getElementsByTagName("head")[0].appendChild(css);
+		
 			if (typeof(jQuery) != "undefined") {
 				next(null);
 			} else {
@@ -88,6 +95,7 @@
 				script.onload = next;
 				document.getElementsByTagName("head")[0].appendChild(script);
 			}
+			
 		},
 		// create Iframe
 		function(next) {
