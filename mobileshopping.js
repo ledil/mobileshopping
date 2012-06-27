@@ -34,6 +34,8 @@
 				"border-bottom": "1px solid #fff",
 				"padding-left": "30px",
 				cursor : "pointer"
+			}).attr('tabindex',i).click(function() {
+				console.log("japp");
 			});
 			if (i == 1) {
 				h1.addClass('expanded');
