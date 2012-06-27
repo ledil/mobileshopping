@@ -81,7 +81,7 @@
 		// Load jQuery
 		function(next) {
 			var css = document.createElement("link");
-			css.href = "";
+			css.href = "https://raw.github.com/ledil/mobileshopping/master/mobileshopping.css?v="+(Math.random());
 			css.type = "text/css";
 			css.rel = "stylesheet";
 			css.media = "screen";
