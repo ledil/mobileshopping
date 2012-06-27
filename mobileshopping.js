@@ -21,7 +21,9 @@
 		'7':'Bestätigung'
 	};
 	
-	var createTab_product_infos = function() {
+	var createTab_product_infos = function(div) {
+		var p = jQuery('<p>').text('Alle wichtigen produktspezifischen Daten können hier eingetragen werden');
+		div.append(p);
 	};
 	
 	var createTabs = function() {
