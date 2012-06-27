@@ -24,8 +24,15 @@
 	var createTab_product_infos = function(div) {
 		var p = jQuery('<p>').text('Alle wichtigen produktspezifischen Daten können hier eingetragen werden');
 		var div_picture = jQuery('<div class="picture"><img src="" /></div>');
+		var fields = jQuery('<div class="fields">\
+			<label>Titel</label> \
+			<input type="text" name="title" value="" placeholder="Produkttitel" /> \
+			<label>Titel</label> \
+			<input type="text" name="title" value="" placeholder="Produkttitel" /> \
+		</div>');
 		div.append(p);
 		div.append(div_picture);
+		div.append(fields);
 	};
 	
 	var createTabs = function() {
@@ -88,6 +95,9 @@
 			$(css).html('\
 				#ma-mshopping {\
 					text-align:left;\
+				}\
+				#ma-mshopping #tabs {\
+					float:none;\
 				}\
 				#ma-mshopping div.tabs { \
 					padding:10px; \
