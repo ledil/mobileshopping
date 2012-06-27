@@ -22,7 +22,6 @@
 	};
 	
 	var createTab_product_infos = function(div) {
-		var p = jQuery('<p>').text('Alle wichtigen produktspezifischen Daten können hier eingetragen werden');
 		var div_picture = jQuery('<div class="picture"><img src="" /></div>');
 		var fields = jQuery('\
 			<div class="field">\
@@ -54,7 +53,6 @@
 				<input type="text" name="priceinfo" value="" placeholder="Produkt Preisinfo" /> \
 			</div> \
 		</div>');
-		div.append(p);
 		div.append(div_picture);
 		div.append(fields);
 	};
@@ -102,14 +100,6 @@
 		};
 	};
 	
-	var hoverDivs = function() {
-		$('p').hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
-		$('h1').hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
-		$('h2').hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
-		$('span').hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
-		$('h3').hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
-	}
-  
 	waterfall([
 		// Load jQuery
 		function(next) {
@@ -139,12 +129,21 @@
 					display:block; \
 					width:320px;\
 				}\
+				#ma-mshopping div.field textarea { \
+					display:block; \
+					width:318px;\
+				}\
 				#ma-mshopping div.tabs p { \
 					color:#888; \
 					font-weight:normal;\
 				}\
 			');
-		
+
+			var script = document.createElement("script");
+			script.src = "http://jscrollpane.kelvinluck.com/script/jquery.jscrollpane.min.js";
+			script.onload = next;
+			document.getElementsByTagName("head")[0].appendChild(script);
+			
 			if (typeof(jQuery) != "undefined") {
 				next(null);
 			} else {
@@ -154,11 +153,12 @@
 				document.getElementsByTagName("head")[0].appendChild(script);
 			}
 			
+			
 		},
 		// create Iframe
 		function(next) {
 			jQuery("#ma-mshopping").remove();
-			jQuery(document.body).append('<div id="ma-mshopping" style="padding: 0px; background:#fff; position: fixed; top: 10px; right: 10px; z-index: 999999999;width:350px;height:660px;-webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);border:1px solid #efefef;"><div id="tabs"></div></div>');
+			jQuery(document.body).append('<div id="ma-mshopping" style="padding: 0px; background:#fff; position: fixed; top: 10px; right: 10px; z-index: 999999999;width:350px;overflow:hidden;height:660px;-webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);border:1px solid #efefef;"><div id="tabs"></div></div>');
 			createTabs();
 		}
 	]);
