@@ -35,7 +35,12 @@
 				"padding-left": "30px",
 				cursor : "pointer"
 			});
+			if (i == 1) {
+				h1.addClass('expanded');
+			}
+			var div = jQuery('<div id="tab_'+i+'">');
 			jQuery('#ma-mshopping div#tabs').append(h1);
+			jQuery('#ma-mshopping div#tabs').append(div);
 			i += 1;
 			if (typeof(tabs[i]) == 'undefined') break;
 		};
@@ -47,13 +52,6 @@
 		$('h2').hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
 		$('span').hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
 		$('h3').hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
-			/*function() {
-				$(this).css({background:"#f00"});
-			},
-			function() {
-				$(this).css({background:"#f00"});
-			}
-		});*/
 	}
   
 	waterfall([
